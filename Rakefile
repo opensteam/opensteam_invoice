@@ -21,3 +21,17 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+
+namespace :opensteam do
+  namespace :plugins do
+    namespace :invoice do
+
+      desc "install the invoice plugin for opensteam (copy migration files..)"
+      task :install do
+        system "rsync -ruv vendor/plugins/opensteam_invoice/db/migrate db"
+#        system "rsync -ruv vendor/plugins/opensteam_invoice/public ."
+      end
+    end
+  end
+end

@@ -3,6 +3,7 @@ OpensteamInvoices
 
 Opensteam plugin for invoices.
 
+Use the rake task "opensteam:plugins:invoice:install" to copy migration files from the plugin to the rails-app
 
 
 Copyright (c) 2009 DiamondDogs Web Consulting, released under GPL
